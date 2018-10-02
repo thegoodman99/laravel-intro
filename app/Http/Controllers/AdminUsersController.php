@@ -136,7 +136,7 @@ class AdminUsersController extends Controller
         
         $user = User::findOrFail($id);
 
-        $input = $request->all();
+        //$input = $request->all();
 
         if($file = $request->file('photo_id')){
 
@@ -167,4 +167,6 @@ class AdminUsersController extends Controller
     {
         //
     }
+
+    
 }

@@ -29,9 +29,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    // protected $hidden = [
+    //     'password', 'remember_token',
+    // ];
 
     public function role(){
 
@@ -44,4 +44,27 @@ class User extends Authenticatable
         return $this->belongsTo('App\Photo');
 
     }
+
+    public function isAdmin() {
+
+        if($this->role->name == "admin"){
+
+            return true;
+
+        }
+
+            return false;
+
+    }
+
+    // public function setPasswordAttribute($password) {
+
+    //     if(!empty(password)) {
+
+    //         $this->attributes['password'] = bcrypt($password);
+
+    //     }
+
+    // }
+
 }
