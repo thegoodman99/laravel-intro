@@ -47,7 +47,7 @@ class User extends Authenticatable
 
     public function isAdmin() {
 
-        if($this->role->name == "admin"){
+        if($this->role->name == "Admin"){
 
             return true;
 
@@ -57,14 +57,5 @@ class User extends Authenticatable
 
     }
 
-    // public function setPasswordAttribute($password) {
-
-    //     if(!empty(password)) {
-
-    //         $this->attributes['password'] = bcrypt($password);
-
-    //     }
-
-    // }
-
+    
 }
