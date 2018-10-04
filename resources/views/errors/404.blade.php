@@ -1,1 +1,9 @@
-<h1>Custom 404 Page</h1>
+@extends('layouts.app')
+
+
+
+@section('content')
+
+<h1>You have no page here.</h1>
+
+@endsection
